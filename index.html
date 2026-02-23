@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Forzamos el renderizado de escritorio en móviles: 1440px es el estándar de oro para terminales financieras -->
+    <meta name="viewport" content="width=1440, initial-scale=0.25, minimum-scale=0.1, user-scalable=yes">
+    <title>Nexus Institutional | Surgical Terminal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow-x: auto;
+            overflow-y: hidden;
+            background-color: #020617;
+        }
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 10px;
+        }
+
+        :root, .theme-dark {
+            --bg-primary: #020617;
+            --bg-secondary: #0f172a;
+            --text-primary: #f8fafc;
+            --text-secondary: #64748b;
+            --border-color: #1e293b;
+            --accent-blue: #3b82f6;
+        }
+
+        .theme-light {
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --accent-blue: #2563eb;
+        }
+
+        #root-wrapper {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            height: 100vh;
+            width: 1440px; /* Bloqueo de ancho de escritorio */
+            min-width: 1440px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            transition: background-color 0.3s ease;
+            position: relative;
+        }
+
+        .themed-bg-secondary { background-color: var(--bg-secondary); }
+        .themed-border { border-color: var(--border-color); }
+        .themed-text-secondary { color: var(--text-secondary); }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

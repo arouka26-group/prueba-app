@@ -1,0 +1,7 @@
+{
+  "name": "Nexus Institutional - EUR/USD Terminal",
+  "description": "A high-frequency institutional trading terminal for EUR/USD binary options, utilizing the Gemini 3 Pro model to detect liquidity imbalances and market manipulation patterns.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
